@@ -11,6 +11,11 @@ h1 {
 	font-size: 50px;
 }
 
+h2 {
+	font-weight: 800;
+	font-size: 50px;
+}
+
 h3 {
 	font-weight: bold;
 	font-size: 30px;
@@ -19,6 +24,12 @@ h3 {
 h4 {
 	font-weight: bold;
 	font-size: 20px;
+}
+
+p {
+	font-weight: bold;
+	font-size: 30px;
+	margin: 30px 0;
 }
 
 .wrapper {
@@ -31,12 +42,17 @@ h4 {
 	height: 100vh;
 	padding: 50px 20px;
 	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
 }
 
-.hero-banner h4,
-.hero-banner h4 a {
-	color: white;
-	margin: 0;
+.hero-banner .wrapper{
+	height: 464px;
+	position: absolute;
+	top: 50%;
+	margin-top: -232px;
+	left: 50%;
+	margin-left: -480px;
 }
 
 .hero-banner h1 {
@@ -49,29 +65,35 @@ h4 {
 	margin: 0 0 35px;
 }
 
-.character1{
-background: url(img/character1.png) no-repeat 0 0;
-background-size: contain;
-position: absolute; top: 262px; right: 30%;
-width: 291.45px;
-height: 307.85px;
+.hero-banner h4,
+.hero-banner h4 a {
+	color: white;
+	margin: 0;
 }
 
-.character3{
-background: url(img/character3.png) no-repeat 0 0;
-background-size: contain;
-position: absolute; top: 212px; right: 8%;
-width: 246.69px;
-height: 329.85px;
-transform: rotate(15deg);
+.character1 {
+	background: url(img/character1.png) no-repeat 0 0;
+	background-size: 100%;
+	width: 363px;
+	height:  344px;
+	position: absolute; top: 10%; right: 10%;
+	transform: rotate(15deg);
 }
 
-.character2{
-background: url(img/character2.png) no-repeat 0 0;
-background-size: contain;
-position: absolute; top: 15%; right: 12%;
-width: 379px;
-height: 384.85px;
+.character2 {
+	background: url(img/character2.png) no-repeat 0 0;
+	background-size: 100%;
+	width: 309px;
+	height: 371px;
+	position: absolute; top: 213px; right: 277px;
+}
+
+.character3 {
+	background: url(img/character3.png) no-repeat 0 0;
+	background-size: 100%;
+	width: 297px;
+	height: 286px;
+	position: absolute; bottom: 74px; right: 109%;
 }
 
 a.cta,
@@ -94,19 +116,53 @@ button.cta.alt {
 	box-shadow: 0 0 0 10px rgba(0,0,0,.15);
 }
 
-/*
-<div class="hero-banner">
-		<div class="wrapper">
-			<h4>Rich from <a href="https://taptapkaboom.com">Tap  Tap Kaboom</a> presents</h4>
-			<h1>The Silliest &amp;<br/>
-				Most Awesome Gang<br/>
-				In The World!</h1>
-			<h3>It's Circle Guy, Hat Guy &amp; Red Guy.<br/>
-				They're the best of friends.</h3>
-			<a class="cta alt" href="#more-info">Read More</a>
-		</div>
-		<div class="character1"></div>
-		<div class="character2"></div>
-		<div class="character3"></div>
-	</div>
-*/
+nav {
+	height: 100px;
+	background-color: white;
+	box-shadow: 0 5px 8px rgba(0,0,0,.2);
+	position: sticky;
+	top: 0;
+}
+
+nav .logo {
+	display: block;
+	width: 300px;
+	height: 40px;
+	position: absolute; top: 50%; left: 0;
+	margin top: -20px;
+	margin-left: 30px;
+	background: url(img/logo.png) no repeat 0 0;
+	background-size: 100%;
+	overflow: hidden;
+	text-indent: -999px;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0 20px 0 0;
+}
+
+nav ul li {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: right;
+}
+
+nav ul li a {
+	display: block;
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #111;
+	text-decoration: none;
+	padding: 35px 10px;
+	line-height: 30px;
+}
+
+.more-info {
+	text-align: center;
+
+}
